@@ -11,6 +11,5 @@
   "github": {
     "release": true
   },
-  "npm": false,
-  "increment": false
+  "npm": false  
 }
