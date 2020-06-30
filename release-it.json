@@ -1,0 +1,10 @@
+{
+  "git": {
+    "commitMessage": "Release v${version}",
+    "requireCleanWorkingDir": false
+  },
+  "github": {
+    "release": true
+  },
+  "npm": false
+}

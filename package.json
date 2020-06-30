@@ -13,7 +13,8 @@
     "test": "jest --ci --env=node",
     "build": "tsc -p .",
     "pretty": "prettier ./*.js ./*.md ./*.json ./test/**/*.js --write",
-    "prepublish": "npm run build && npm test && npm run pretty"
+    "prepublish": "npm run build && npm test && npm run pretty",
+    "release": "release-it"
   },
   "keywords": [
     "graphql",
@@ -35,6 +36,7 @@
     "jest": "^26.1.0",
     "json5": "^2.1.3",
     "prettier": "^2.0.5",
+    "release-it": "^13.6.4",
     "typescript": "^3.9.5"
   },
   "dependencies": {},
