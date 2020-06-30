@@ -7,3 +7,4 @@
 *.tar.gz
 *.lock
 *.log
+*-lock.json
