@@ -1,0 +1,16 @@
+{
+  "git": {
+    "requireBranch": "master",
+    "commit": false,
+    "commitMessage": "Release v${version}",
+    "requireCleanWorkingDir": false,
+    "requireUpstream": false,
+    "requireCommits": false,                
+    "push": true    
+  },
+  "github": {
+    "release": true
+  },
+  "npm": false,
+  "increment": false
+}
