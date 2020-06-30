@@ -5,11 +5,11 @@
     "commitMessage": "Release v${version}",
     "requireCleanWorkingDir": false,
     "requireUpstream": false,
-    "requireCommits": false,                
-    "push": true    
+    "requireCommits": false,
+    "push": true
   },
   "github": {
     "release": true
   },
-  "npm": false  
+  "npm": false
 }
