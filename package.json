@@ -1,0 +1,49 @@
+{
+  "name": "@d10221/graphql-scalar-json5",
+  "version": "0.1.0-beta.1",
+  "description": "GraphQL JSON5 scalar type",
+  "main": "cjs/index.js",
+  "module": "index.js",
+  "types": "cjs/index.d.ts",
+  "files": [
+    "index.js",
+    "cjs"
+  ],
+  "scripts": {
+    "test": "jest --ci --env=node",
+    "build": "tsc -p .",
+    "pretty": "prettier ./*.js ./*.md ./*.json ./test/**/*.js --write",
+    "prepublish": "yarn build && yarn test && yarn pretty"
+  },
+  "keywords": [
+    "graphql",
+    "scalar",
+    "json5"
+  ],
+  "author": "Mr D.",
+  "license": "MIT",
+  "peerDependencies": {
+    "graphql": "^15.2.0",
+    "json5": "*"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.10.3",
+    "@types/jest": "^26.0.3",
+    "@types/json5": "^0.0.30",
+    "graphql": "^15.2.0",
+    "graphql-tools": "^6.0.11",
+    "jest": "^26.1.0",
+    "json5": "^2.1.3",
+    "prettier": "^2.0.5",
+    "typescript": "^3.9.5"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/d10221/graphql-scalar-json5.git"
+  },
+  "bugs": {
+    "url": "https://github.com/d10221/graphql-scalar-json5/issues"
+  },
+  "homepage": "https://github.com/d10221/graphql-scalar-json5#readme"
+}
