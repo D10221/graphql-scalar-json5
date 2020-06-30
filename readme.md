@@ -1,5 +1,7 @@
 # GraphQL JSON5 scalar type
 
+![Node.js Package](https://github.com/D10221/graphql-scalar-json5/workflows/Node.js%20Package/badge.svg)
+
 ## Install
 
 ```bash
