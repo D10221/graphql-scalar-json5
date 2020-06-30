@@ -14,8 +14,7 @@
     "build": "tsc -p .",
     "pretty": "prettier ./*.js ./*.md ./*.json ./test/**/*.js --write",
     "prepare": "npm run build && npm test && npm run pretty",
-    "release": "release-it",
-    "publish-it": "echo Don't forget to 'publish --access=public' ? , at least Once!!!, then 'npm run release' :)"
+    "release": "release-it"    
   },
   "keywords": [
     "graphql",
