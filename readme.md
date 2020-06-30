@@ -18,9 +18,7 @@ npm i graphql   # peer dependency
 npm i json5     # peer dependency
 ```
 
-##
-
-## Usage
+### Usage
 
 ```javascript
 import JSON5 from "../";

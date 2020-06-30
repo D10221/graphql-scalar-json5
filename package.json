@@ -13,7 +13,7 @@
     "test": "jest --ci --env=node",
     "build": "tsc -p .",
     "pretty": "prettier ./*.js ./*.md ./*.json ./test/**/*.js --write",
-    "prepublish": "npm run build && npm test && npm run pretty",
+    "prepare": "npm run build && npm test && npm run pretty",
     "release": "release-it"
   },
   "keywords": [
