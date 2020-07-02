@@ -1,5 +1,4 @@
-import { GraphQLScalarType } from "graphql";
-import { Kind } from "graphql/language";
+import { GraphQLScalarType, Kind, GraphQLError } from "graphql";
 import JSON5 from "json5";
 /** */
 export default new GraphQLScalarType({
@@ -8,7 +7,7 @@ export default new GraphQLScalarType({
   serialize: JSON5.stringify,
   parseValue: JSON5.parse,
   /**
-   * @param {import("graphql").ASTNode | any} ast
+   * @param {import("graphql").ASTNode} ast
    */
   parseLiteral: (ast, variables) => {
     switch (ast.kind) {
@@ -16,9 +15,12 @@ export default new GraphQLScalarType({
         return (
           (variables && JSON5.parse(variables[ast.name.value])) || undefined
         );
-      default: {
+      case Kind.STRING:
         return JSON5.parse(ast.value);
-      }
+      default:
+        throw new GraphQLError(
+          `Expected '${Kind.STRING}' but got '${ast.kind}'`,
+        );
     }
   },
 });

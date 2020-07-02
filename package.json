@@ -1,6 +1,6 @@
 {
   "name": "@d10221/graphql-scalar-json5",
-  "version": "0.1.0-7",
+  "version": "0.1.0-8",
   "description": "GraphQL JSON5 scalar type",
   "main": "cjs/index.js",
   "module": "index.js",

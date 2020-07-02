@@ -1,4 +1,10 @@
-import { graphql, GraphQLObjectType, GraphQLSchema } from "graphql";
+import {
+  graphql,
+  GraphQLObjectType,
+  GraphQLSchema,
+  Kind,
+  GraphQLError,
+} from "graphql";
 import { makeExecutableSchema } from "graphql-tools";
 import JSON5 from "../";
 import json5 from "json5";
@@ -67,5 +73,16 @@ describe("JSON", () => {
     ).toMatchObject({
       data: { value: json5.stringify({ x: "y" }) },
     });
+  });
+  it("rejects what json5 can't parse", async () => {
+    const { errors } = await graphql(
+      schema1,
+      /* GraphQL */ `
+        query {
+          value(params: {})
+        }
+      `,
+    );
+    expect(errors[0]).toBeInstanceOf(GraphQLError);
   });
 });

@@ -1,7 +1,6 @@
 **/.vscode/*
 **/node_modules/*
 **/coverage/*
-**/cjs/*
 *.tgz
 *.zip
 *.tar.gz
